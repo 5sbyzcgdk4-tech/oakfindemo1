@@ -1,0 +1,2423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OakFIN — Specialist Fintech &amp; SaaS Recruitment</title>
+<meta name="description" content="OakFIN is a specialist recruitment partner for fintech and B2B SaaS. We place commercial, product, implementation and engineering talent across London, Europe and North America.">
+<meta property="og:title" content="OakFIN — Specialist Fintech &amp; SaaS Recruitment">
+<meta property="og:description" content="Precision search for fintech and B2B SaaS talent. Commercial, product, implementation and engineering roles across global markets.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://oakfinltd.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root {
+  --night:   #080b0c;
+  --night-2: #0f1416;
+  --night-3: #161c1e;
+  --night-4: #1e2628;
+  --dim:     #2c3436;
+  --mist:    #8a9295;
+  --chalk:   #c8cfd1;
+  --paper:   #f0ede6;
+  --white:   #fafaf8;
+  --gold:    #c9a84c;
+  --gold-dim:#a07c2a;
+  --gold-bg: rgba(201,168,76,0.06);
+  --gold-bg2:rgba(201,168,76,0.10);
+  --rule:    rgba(255,255,255,0.07);
+  --rule-p:  rgba(8,11,12,0.08);
+  --serif: 'Cormorant Garamond','Georgia',serif;
+  --sans:  'DM Sans',system-ui,-apple-system,sans-serif;
+  --max: 1220px;
+  --nav-h: 68px;
+  --ease: cubic-bezier(0.22,1,0.36,1);
+}
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--sans);
+  background: var(--night);
+  color: var(--paper);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ══ NAV ══════════════════════════════════════════ */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  transition: background 0.4s var(--ease), border-color 0.4s;
+  border-bottom: 1px solid transparent;
+}
+nav.scrolled {
+  background: rgba(8,11,12,0.96);
+  backdrop-filter: blur(16px);
+  border-color: var(--rule);
+}
+.nav-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 2.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  text-decoration: none;
+  letter-spacing: -0.03em;
+}
+.logo-word {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: var(--paper);
+  line-height: 1;
+}
+.logo-word em { font-style: normal; color: var(--gold); }
+.logo-sup {
+  font-family: var(--sans);
+  font-size: 0.5rem;
+  font-weight: 500;
+  color: var(--mist);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-left: 0.5rem;
+  margin-top: -0.75rem;
+  align-self: flex-start;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  align-items: center;
+}
+.nav-links a {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--mist);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--paper); }
+.nav-contact {
+  color: var(--gold) !important;
+  border-bottom: 1px solid rgba(201,168,76,0.4);
+  padding-bottom: 1px;
+}
+.nav-contact:hover { color: var(--gold) !important; border-color: var(--gold); }
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: var(--paper);
+  transition: all 0.3s var(--ease);
+}
+
+/* ══ HERO ══════════════════════════════════════════ */
+.hero {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--nav-h) 2.5rem 5rem;
+  position: relative;
+  background: var(--night);
+  overflow: hidden;
+}
+.hero-mark {
+  position: absolute;
+  top: -4rem;
+  right: -2rem;
+  font-family: var(--serif);
+  font-size: clamp(20rem,40vw,52rem);
+  font-weight: 300;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255,255,255,0.03);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  letter-spacing: -0.05em;
+}
+.hero-rule {
+  position: absolute;
+  top: 50%;
+  left: 0; right: 0;
+  height: 1px;
+  background: var(--rule);
+  z-index: 0;
+}
+.hero-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.hero-label {
+  font-family: var(--sans);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.hero-label::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+.hero-h1 {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(3.5rem,8vw,8rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: var(--paper);
+  margin-bottom: 3.5rem;
+  max-width: 14ch;
+}
+.hero-h1 em { font-style: italic; color: var(--gold); }
+.hero-h1 .underlined {
+  position: relative;
+  display: inline;
+}
+.hero-h1 .underlined::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0.06em;
+  right: 0;
+  height: 2px;
+  background: var(--gold);
+}
+.hero-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 3rem;
+  border-top: 1px solid var(--rule);
+  padding-top: 2rem;
+}
+.hero-sub {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--mist);
+  line-height: 1.75;
+  max-width: 480px;
+}
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+/* ══ BUTTONS ══════════════════════════════════════════ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.875rem 1.75rem;
+  border: 1px solid;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
+  white-space: nowrap;
+}
+.btn svg {
+  width: 14px; height: 14px;
+  stroke: currentColor; fill: none;
+  stroke-width: 1.5;
+  transition: transform 0.25s var(--ease);
+  flex-shrink: 0;
+}
+.btn:hover svg { transform: translateX(4px); }
+.btn-gold {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--night);
+}
+.btn-gold:hover { background: transparent; color: var(--gold); }
+.btn-outline {
+  background: transparent;
+  border-color: var(--rule);
+  color: var(--mist);
+}
+.btn-outline:hover { border-color: var(--chalk); color: var(--paper); }
+.btn-outline-gold {
+  background: transparent;
+  border-color: rgba(201,168,76,0.4);
+  color: var(--gold);
+}
+.btn-outline-gold:hover { border-color: var(--gold); background: var(--gold-bg); }
+.btn-outline-dark {
+  background: transparent;
+  border-color: rgba(8,11,12,0.2);
+  color: var(--dim);
+}
+.btn-outline-dark:hover { border-color: var(--dim); color: var(--night); }
+
+/* ══ TICKER ══════════════════════════════════════════ */
+.ticker {
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 1rem 0;
+  overflow: hidden;
+  background: var(--night-2);
+}
+.ticker-track {
+  display: flex;
+  gap: 0;
+  animation: scroll-left 50s linear infinite;
+  white-space: nowrap;
+}
+.ticker-track:hover { animation-play-state: paused; }
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  flex-shrink: 0;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mist);
+  padding: 0 2rem;
+}
+.ticker-dot {
+  display: inline-block;
+  width: 3px; height: 3px;
+  background: var(--gold);
+  border-radius: 50%;
+  margin: 0 2rem;
+  flex-shrink: 0;
+}
+@keyframes scroll-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ══ SHARED SECTION SCAFFOLD ══════════════════════════════════════════ */
+.section-wrap {
+  padding: 8rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.section-wrap.light { background: var(--white); color: var(--night); }
+.section-wrap.dark  { background: var(--night); color: var(--paper); }
+.section-wrap.mid   { background: var(--night-2); color: var(--paper); }
+.section-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.bg-num {
+  position: absolute;
+  top: 50%;
+  right: -1rem;
+  transform: translateY(-50%);
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(12rem,25vw,22rem);
+  line-height: 1;
+  color: transparent;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  letter-spacing: -0.05em;
+}
+.dark .bg-num,.mid .bg-num { -webkit-text-stroke: 1px rgba(255,255,255,0.04); }
+.light .bg-num             { -webkit-text-stroke: 1px rgba(8,11,12,0.05); }
+
+.s-label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.s-label::before {
+  content: '';
+  width: 32px; height: 1px;
+  background: var(--gold);
+  flex-shrink: 0;
+  display: block;
+}
+.s-label.dark-label { color: var(--mist); }
+.s-label.dark-label::before { background: var(--mist); }
+
+.s-h2 {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(2.4rem,5vw,4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+.light .s-h2 { color: var(--night); }
+.s-h2 em { font-style: italic; }
+
+.s-lead {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.8;
+  max-width: 520px;
+}
+.dark .s-lead,.mid .s-lead { color: var(--mist); }
+.light .s-lead { color: #4a5568; }
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+.split.align-center { align-items: center; }
+
+/* ══ ROLES GRID ══════════════════════════════════════════ */
+.roles-header {
+  display: grid;
+  grid-template-columns: 5fr 4fr;
+  gap: 4rem;
+  align-items: end;
+  margin-bottom: 4rem;
+  border-bottom: 1px solid var(--rule-p);
+  padding-bottom: 3rem;
+}
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 0;
+  border: 1px solid var(--rule-p);
+}
+.role-cell {
+  padding: 2.25rem 2rem;
+  border-right: 1px solid var(--rule-p);
+  border-bottom: 1px solid var(--rule-p);
+  transition: background 0.25s var(--ease);
+  position: relative;
+}
+.role-cell:hover { background: var(--gold-bg); }
+.role-cell:nth-child(3n)      { border-right: none; }
+.role-cell:nth-last-child(-n+3) { border-bottom: none; }
+.role-n {
+  font-family: var(--serif);
+  font-size: 0.875rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  display: block;
+}
+.role-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--night);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+.role-desc {
+  font-size: 0.8125rem;
+  color: #6a7882;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+.role-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+.tag {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.625rem;
+  border: 1px solid rgba(8,11,12,0.12);
+  color: #5a6870;
+}
+
+/* ══ STATS ROW ══════════════════════════════════════════ */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 0;
+  border: 1px solid var(--rule-p);
+  margin-top: 4rem;
+  background: rgba(8,11,12,0.02);
+}
+.stat-cell {
+  padding: 2.5rem 2rem;
+  border-right: 1px solid var(--rule-p);
+  text-align: left;
+}
+.stat-cell:last-child { border-right: none; }
+.stat-num {
+  font-family: var(--serif);
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--night);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.stat-num em { font-style: normal; color: var(--gold-dim); }
+.stat-label {
+  font-size: 0.8125rem;
+  font-weight: 300;
+  color: #6a7882;
+  line-height: 1.5;
+}
+
+/* ══ SECTORS ══════════════════════════════════════════ */
+.sector-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 4rem;
+}
+.sector-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--rule);
+  transition: background 0.2s;
+}
+.sector-row:last-child { border-bottom: 1px solid var(--rule); }
+.sector-row:hover { background: rgba(255,255,255,0.02); }
+.sector-n {
+  font-family: var(--serif);
+  font-size: 1rem;
+  color: var(--gold);
+  min-width: 2.5rem;
+  padding-top: 0.15rem;
+  flex-shrink: 0;
+}
+.sector-name {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--paper);
+  letter-spacing: -0.01em;
+  min-width: 260px;
+  flex-shrink: 0;
+  line-height: 1.2;
+  padding-top: 0.1rem;
+}
+.sector-detail {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--mist);
+  line-height: 1.7;
+  flex: 1;
+  padding-top: 0.2rem;
+}
+.sector-roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  min-width: 180px;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+.sector-role-tag {
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--mist);
+  border: 1px solid var(--rule);
+  padding: 0.2rem 0.625rem;
+}
+
+/* ══ PROCESS ══════════════════════════════════════════ */
+.process-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+  margin-top: 4rem;
+}
+.process-steps { display: flex; flex-direction: column; }
+.process-step {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 1.5rem;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: start;
+}
+.process-step:first-child { border-top: 1px solid var(--rule); }
+.ps-num {
+  font-family: var(--serif);
+  font-size: 0.875rem;
+  color: var(--gold);
+  padding-top: 0.1rem;
+}
+.ps-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--paper);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+.ps-desc {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--mist);
+  line-height: 1.7;
+}
+.qual-panel {
+  border: 1px solid var(--rule);
+  background: var(--night-3);
+  padding: 0;
+  overflow: hidden;
+}
+.qual-panel-header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.qual-panel-title {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mist);
+}
+.qual-badge {
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid rgba(201,168,76,0.3);
+  padding: 0.2rem 0.625rem;
+}
+.qual-rows { display: flex; flex-direction: column; }
+.qual-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid var(--rule);
+  gap: 1.5rem;
+}
+.qual-row:last-child { border-bottom: none; }
+.qual-criterion {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--chalk);
+}
+.qual-signal {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--mist);
+  flex-shrink: 0;
+}
+.signal-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.signal-dot.green { background: #4ade80; }
+.signal-dot.amber { background: var(--gold); }
+
+/* ══ VALUE PROPS ══════════════════════════════════════════ */
+.vp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--rule);
+  margin-top: 4rem;
+  border: 1px solid var(--rule);
+}
+.vp-card {
+  background: var(--night);
+  padding: 3rem 2.5rem;
+}
+.vp-for {
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.vp-for::before {
+  content: '';
+  width: 20px; height: 1px;
+  background: var(--gold);
+  display: block;
+  flex-shrink: 0;
+}
+.vp-title {
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--paper);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 2rem;
+}
+.vp-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.vp-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--mist);
+  line-height: 1.7;
+}
+.vp-list li::before {
+  content: '—';
+  color: var(--gold);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+  font-size: 0.75rem;
+}
+
+/* ══ ENGAGEMENT MODES ══════════════════════════════════════════ */
+.engage-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 4rem;
+}
+.engage-row {
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--rule-p);
+}
+.engage-row:last-child { border-bottom: 1px solid var(--rule-p); }
+.er-label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8a9295;
+  margin-bottom: 0.625rem;
+}
+.er-title {
+  font-family: var(--serif);
+  font-size: 1.625rem;
+  font-weight: 300;
+  color: var(--night);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.er-desc {
+  font-size: 0.875rem;
+  color: #6a7882;
+  line-height: 1.7;
+  font-weight: 300;
+}
+.er-action { text-align: right; }
+
+/* ══ LIVE ROLES ══════════════════════════════════════════ */
+.live-role-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 4rem;
+}
+.live-role-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  padding: 2.25rem 0;
+  border-top: 1px solid var(--rule);
+  transition: background 0.2s;
+  text-decoration: none;
+  color: inherit;
+}
+.live-role-row:last-child { border-bottom: 1px solid var(--rule); }
+.live-role-row:hover { background: rgba(255,255,255,0.02); }
+.live-role-n {
+  font-family: var(--serif);
+  font-size: 1rem;
+  color: var(--gold);
+  min-width: 2.5rem;
+  flex-shrink: 0;
+  padding-top: 0.2rem;
+}
+.live-role-head {
+  min-width: 280px;
+  flex-shrink: 0;
+}
+.live-role-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #4ade80;
+  margin-bottom: 0.5rem;
+}
+.live-role-live::before {
+  content: '';
+  width: 5px; height: 5px;
+  background: #4ade80;
+  border-radius: 50%;
+  display: block;
+  animation: live-pulse 2s infinite;
+}
+@keyframes live-pulse {
+  0%,100% { opacity: 1; }
+  50%      { opacity: 0.4; }
+}
+.live-role-title {
+  font-family: var(--serif);
+  font-size: 1.375rem;
+  font-weight: 300;
+  color: var(--paper);
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+.live-role-detail {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--mist);
+  line-height: 1.7;
+  flex: 1;
+  padding-top: 0.2rem;
+}
+.live-role-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.875rem;
+  flex-shrink: 0;
+  padding-top: 0.1rem;
+}
+.live-salary {
+  font-family: var(--serif);
+  font-size: 1.375rem;
+  font-weight: 300;
+  color: var(--paper);
+  letter-spacing: -0.01em;
+}
+.live-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: flex-end;
+}
+.live-tag {
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--mist);
+  border: 1px solid var(--rule);
+  padding: 0.2rem 0.625rem;
+}
+.live-apply {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border-bottom: 1px solid rgba(201,168,76,0.35);
+  padding-bottom: 1px;
+  text-decoration: none;
+  transition: border-color 0.2s;
+  cursor: pointer;
+  background: none;
+  border-top: none; border-left: none; border-right: none;
+  font-family: var(--sans);
+  white-space: nowrap;
+}
+.live-apply:hover { border-color: var(--gold); }
+.pipeline-note {
+  margin-top: 3rem;
+  padding: 2rem;
+  border: 1px solid var(--rule);
+  background: var(--night-2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.pipeline-note-text {
+  font-size: 0.9375rem;
+  font-weight: 300;
+  color: var(--mist);
+  line-height: 1.65;
+}
+.pipeline-note-text strong {
+  color: var(--paper);
+  font-weight: 400;
+}
+
+/* ══ ABOUT ══════════════════════════════════════════ */
+.about-layout {
+  display: grid;
+  grid-template-columns: 4fr 5fr;
+  gap: 6rem;
+  align-items: start;
+}
+.about-sticky {
+  position: sticky;
+  top: calc(var(--nav-h) + 2rem);
+}
+.founder-block {
+  border: 1px solid var(--rule);
+  padding: 2.5rem;
+  background: var(--night-3);
+}
+.founder-initial {
+  width: 56px; height: 56px;
+  border: 1px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+}
+.founder-initial span {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+}
+.founder-name {
+  font-family: var(--serif);
+  font-size: 1.625rem;
+  font-weight: 300;
+  color: var(--paper);
+  letter-spacing: -0.01em;
+  margin-bottom: 0.25rem;
+}
+.founder-title {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+}
+.founder-bio {
+  font-size: 0.9375rem;
+  font-weight: 300;
+  color: var(--mist);
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+.founder-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-top: 1px solid var(--rule);
+  padding-top: 1.5rem;
+}
+.founder-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--chalk);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.founder-link:hover { color: var(--gold); }
+.founder-link svg {
+  width: 14px; height: 14px;
+  stroke: currentColor; fill: none;
+  stroke-width: 1.5;
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.about-block {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.about-block:first-child { padding-top: 0; }
+.about-block:last-child { border-bottom: none; }
+.ab-label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mist);
+  margin-bottom: 0.875rem;
+}
+.ab-h {
+  font-family: var(--serif);
+  font-size: 1.625rem;
+  font-weight: 300;
+  color: var(--paper);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin-bottom: 0.875rem;
+}
+.ab-p {
+  font-size: 0.9375rem;
+  font-weight: 300;
+  color: var(--mist);
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+}
+.ab-p:last-child { margin-bottom: 0; }
+.geo-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+.geo-tag {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--mist);
+  border: 1px solid var(--rule);
+  padding: 0.3rem 0.875rem;
+}
+.charity-block {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgba(201,168,76,0.15);
+  background: var(--gold-bg);
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+.charity-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  padding-top: 0.1rem;
+}
+.charity-label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.375rem;
+}
+.charity-text {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--mist);
+  line-height: 1.65;
+}
+.team-note {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--rule);
+  background: var(--night-2);
+}
+.team-note-label {
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mist);
+  margin-bottom: 0.75rem;
+}
+.team-member {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+.team-member:last-child { margin-bottom: 0; }
+.team-initial {
+  width: 32px; height: 32px;
+  border: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.team-initial span {
+  font-family: var(--serif);
+  font-size: 0.875rem;
+  color: var(--mist);
+}
+.team-name {
+  font-size: 0.875rem;
+  color: var(--chalk);
+  font-weight: 300;
+}
+.team-role { font-size: 0.75rem; color: var(--mist); font-weight: 300; }
+.team-email {
+  font-size: 0.75rem;
+  color: var(--gold);
+  text-decoration: none;
+  margin-left: auto;
+}
+.team-email:hover { text-decoration: underline; }
+
+/* ══ BRIEF FORM ══════════════════════════════════════════ */
+.brief-section {
+  background: var(--paper);
+  padding: 7rem 2.5rem;
+}
+.brief-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+}
+.brief-left .s-label { color: #7a6a3a; }
+.brief-left .s-label::before { background: #7a6a3a; }
+.brief-left .s-h2 { color: var(--night); }
+.brief-left .s-lead { color: #5a6575; }
+
+/* Form tabs */
+.form-tabs {
+  display: flex;
+  gap: 0;
+  border: 1px solid rgba(8,11,12,0.12);
+  margin-bottom: 2rem;
+}
+.form-tab {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8a9295;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+  border-right: 1px solid rgba(8,11,12,0.12);
+  text-align: center;
+}
+.form-tab:last-child { border-right: none; }
+.form-tab.active {
+  background: var(--night);
+  color: var(--paper);
+}
+.form-panel { display: none; }
+.form-panel.active { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.brief-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.form-field.full { grid-column: 1/-1; }
+.form-lbl {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6a7882;
+}
+.form-input,
+.form-select,
+.form-textarea {
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 300;
+  color: var(--night);
+  background: var(--white);
+  border: 1px solid rgba(8,11,12,0.15);
+  border-radius: 0;
+  padding: 0.875rem 1rem;
+  outline: none;
+  transition: border-color 0.2s var(--ease);
+  -webkit-appearance: none;
+}
+.form-input::placeholder,.form-textarea::placeholder { color: #b0b8c0; }
+.form-input:focus,.form-select:focus,.form-textarea:focus { border-color: var(--night); }
+.form-select { cursor: pointer; }
+.form-textarea { resize: vertical; min-height: 140px; }
+.form-submit {
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--night);
+  color: var(--paper);
+  border: 1px solid var(--night);
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+.form-submit:hover { background: transparent; color: var(--night); }
+.form-submit svg {
+  width: 14px; height: 14px;
+  stroke: currentColor; fill: none;
+  stroke-width: 1.5;
+  transition: transform 0.25s var(--ease);
+}
+.form-submit:hover svg { transform: translateX(4px); }
+.form-note {
+  font-size: 0.75rem;
+  color: #9aa0a8;
+  line-height: 1.6;
+}
+
+/* ══ FOOTER ══════════════════════════════════════════ */
+footer {
+  background: var(--night);
+  border-top: 1px solid var(--rule);
+  padding: 4rem 2.5rem 2.5rem;
+}
+.footer-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 2rem;
+}
+.footer-brand-word {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 2rem;
+  color: var(--paper);
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+.footer-brand-word em { font-style: normal; color: var(--gold); }
+.footer-tagline {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--mist);
+  line-height: 1.75;
+  max-width: 260px;
+  margin-bottom: 1.5rem;
+}
+.footer-contact-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+}
+.footer-contact-item {
+  font-size: 0.8125rem;
+  font-weight: 300;
+  color: var(--mist);
+}
+.footer-contact-item a { color: var(--chalk); text-decoration: none; transition: color 0.2s; }
+.footer-contact-item a:hover { color: var(--gold); }
+.footer-col-label {
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 1.25rem;
+}
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.footer-links a {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--mist);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--paper); }
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.footer-copy { font-size: 0.75rem; color: var(--dim); font-weight: 300; }
+.footer-legal { display: flex; gap: 1.5rem; }
+.footer-legal a {
+  font-size: 0.75rem;
+  color: var(--dim);
+  text-decoration: none;
+  transition: color 0.2s;
+  font-weight: 300;
+}
+.footer-legal a:hover { color: var(--mist); }
+
+/* ══ MOBILE NAV ══════════════════════════════════════════ */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--night);
+  z-index: 150;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 2.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s var(--ease);
+}
+.mobile-nav.open { display: flex; opacity: 1; pointer-events: all; }
+.mobile-nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.mobile-nav-links a {
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--paper);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  transition: color 0.2s;
+}
+.mobile-nav-links a:hover { color: var(--gold); }
+.mobile-nav-close {
+  position: absolute;
+  top: 1.5rem; right: 2rem;
+  background: none; border: none;
+  color: var(--mist);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.mobile-nav-footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+}
+.mobile-nav-footer a {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--mist);
+  text-decoration: none;
+  margin-bottom: 0.625rem;
+}
+.mobile-nav-footer a:hover { color: var(--gold); }
+
+/* ══ RESPONSIVE ══════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .roles-header { grid-template-columns: 1fr; gap: 2rem; }
+  .roles-grid { grid-template-columns: 1fr 1fr; }
+  .role-cell:nth-child(3n)       { border-right: 1px solid var(--rule-p); }
+  .role-cell:nth-child(2n)       { border-right: none; }
+  .role-cell:nth-last-child(-n+3){ border-bottom: 1px solid var(--rule-p); }
+  .role-cell:nth-last-child(-n+2){ border-bottom: none; }
+  .sector-row { flex-wrap: wrap; }
+  .sector-roles { display: none; }
+  .sector-name { min-width: 0; }
+  .live-role-row { flex-wrap: wrap; }
+  .live-role-right { align-items: flex-start; }
+  .engage-row { grid-template-columns: 1fr 1fr; }
+  .er-action { grid-column: 1/-1; text-align: left; }
+  .stats-row { grid-template-columns: 1fr 1fr; }
+  .stat-cell:nth-child(2) { border-right: none; }
+  .stat-cell:nth-child(3) { border-top: 1px solid var(--rule-p); }
+  .stat-cell:nth-child(4) { border-top: 1px solid var(--rule-p); border-right: none; }
+  .brief-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .pipeline-note { flex-direction: column; gap: 1.5rem; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+  .hero { padding: var(--nav-h) 1.5rem 3.5rem; }
+  .hero-bottom { flex-direction: column; align-items: flex-start; }
+  .hero-mark { font-size: 16rem; }
+  .section-wrap { padding: 5rem 1.5rem; }
+  .bg-num { font-size: 10rem; }
+  .split { grid-template-columns: 1fr; gap: 3rem; }
+  .roles-grid { grid-template-columns: 1fr; }
+  .role-cell { border-right: none !important; }
+  .role-cell:nth-last-child(-n+2) { border-bottom: 1px solid var(--rule-p) !important; }
+  .role-cell:last-child { border-bottom: none !important; }
+  .sector-row { flex-direction: column; gap: 0.75rem; }
+  .sector-name { font-size: 1.25rem; min-width: 0; }
+  .live-role-row { flex-direction: column; gap: 0.75rem; }
+  .live-role-head { min-width: 0; }
+  .live-role-right { align-items: flex-start; flex-direction: row; flex-wrap: wrap; gap: 0.75rem; }
+  .process-layout { grid-template-columns: 1fr; }
+  .vp-grid { grid-template-columns: 1fr; }
+  .engage-row { grid-template-columns: 1fr; gap: 1rem; }
+  .er-action { text-align: left; }
+  .about-layout { grid-template-columns: 1fr; gap: 3rem; }
+  .about-sticky { position: static; }
+  .brief-section { padding: 5rem 1.5rem; }
+  .brief-inner { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .stats-row { grid-template-columns: 1fr; }
+  .stat-cell { border-right: none !important; border-top: 1px solid var(--rule-p); }
+  .stat-cell:first-child { border-top: none; }
+  .footer-top { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .pipeline-note { flex-direction: column; gap: 1rem; }
+  .hero-actions { flex-direction: column; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation: none; }
+  .live-role-live::before { animation: none; }
+  * { transition-duration: 0.01ms !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ MOBILE NAV ═══ -->
+<div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Navigation menu" aria-hidden="true">
+  <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">✕</button>
+  <ul class="mobile-nav-links">
+    <li><a href="#roles"       onclick="closeMobileNav()">What we recruit</a></li>
+    <li><a href="#sectors"     onclick="closeMobileNav()">Sectors</a></li>
+    <li><a href="#process"     onclick="closeMobileNav()">Process</a></li>
+    <li><a href="#live-roles"  onclick="closeMobileNav()">Live roles</a></li>
+    <li><a href="#about"       onclick="closeMobileNav()">About</a></li>
+    <li><a href="#brief"       onclick="closeMobileNav()" style="color:var(--gold)">Brief us</a></li>
+  </ul>
+  <div class="mobile-nav-footer">
+    <a href="mailto:nicky@oakfinltd.com">nicky@oakfinltd.com</a>
+    <a href="tel:07903637357">07903 637 357</a>
+  </div>
+</div>
+
+<!-- ═══ NAV ═══ -->
+<nav id="mainNav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#top" class="logo" aria-label="OakFIN — home">
+      <span class="logo-word">Oak<em>FIN</em></span>
+      <span class="logo-sup" aria-hidden="true">Ltd</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#roles">What we recruit</a></li>
+      <li><a href="#sectors">Sectors</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#live-roles">Live roles</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#brief" class="nav-contact">Brief us</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="top" aria-labelledby="hero-h1">
+  <div class="hero-mark" aria-hidden="true">OF</div>
+  <div class="hero-rule" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <p class="hero-label">Specialist Fintech &amp; SaaS Recruitment</p>
+    <h1 class="hero-h1" id="hero-h1">
+      Talent that builds<br>
+      <em>financial</em><br>
+      <span class="underlined">technology</span>
+    </h1>
+    <div class="hero-bottom">
+      <p class="hero-sub">OakFIN places commercial, product, implementation and engineering professionals into fintech, B2B SaaS and financial services technology businesses. Founder-led. London-anchored. Globally capable.</p>
+      <div class="hero-actions">
+        <a href="#brief" class="btn btn-gold">
+          Send a brief
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#roles" class="btn btn-outline">
+          Explore roles
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TICKER ═══ -->
+<div class="ticker" aria-hidden="true" role="marquee">
+  <div class="ticker-track">
+    <span class="ticker-item">Fintech Recruitment</span><span class="ticker-dot"></span>
+    <span class="ticker-item">B2B SaaS Hiring</span><span class="ticker-dot"></span>
+    <span class="ticker-item">Account Executive Search</span><span class="ticker-dot"></span>
+    <span class="ticker-item">Customer Success</span><span class="ticker-dot"></span>
+    <span class="ticker-item">Presales &amp; Solutions</span><span class="ticker-dot"></span>
+    <span class="ticker-item">Implementation</span><span class="ticker-dot"></span>
+    <span class="ticker-item">Product Management</span><span class="ticker-dot"></span>
+    <span class="ticker-item">Capital Markets Technology</span><span class="ticker-dot"></span>
+    <span class="ticker-item">Private Markets SaaS</span><span class="ticker-dot"></span>
+    <span class="ticker-item">Payments &amp; Infrastructure</span><span class="ticker-dot"></span>
+    <span class="ticker-item">Financial Data</span><span class="ticker-dot"></span>
+    <span class="ticker-item">London · Europe · North America</span><span class="ticker-dot"></span>
+    <span class="ticker-item">Fintech Recruitment</span><span class="ticker-dot"></span>
+    <span class="ticker-item">B2B SaaS Hiring</span><span class="ticker-dot"></span>
+    <span class="ticker-item">Account Executive Search</span><span class="ticker-dot"></span>
+    <span class="ticker-item">Customer Success</span><span class="ticker-dot"></span>
+    <span class="ticker-item">Presales &amp; Solutions</span><span class="ticker-dot"></span>
+    <span class="ticker-item">Implementation</span><span class="ticker-dot"></span>
+    <span class="ticker-item">Product Management</span><span class="ticker-dot"></span>
+    <span class="ticker-item">Capital Markets Technology</span><span class="ticker-dot"></span>
+    <span class="ticker-item">Private Markets SaaS</span><span class="ticker-dot"></span>
+    <span class="ticker-item">Payments &amp; Infrastructure</span><span class="ticker-dot"></span>
+    <span class="ticker-item">Financial Data</span><span class="ticker-dot"></span>
+    <span class="ticker-item">London · Europe · North America</span><span class="ticker-dot"></span>
+  </div>
+</div>
+
+<!-- ═══ WHAT WE RECRUIT (LIGHT / 01) ═══ -->
+<section class="section-wrap light" id="roles" aria-labelledby="roles-h2">
+  <span class="bg-num" aria-hidden="true">01</span>
+  <div class="section-inner">
+    <div class="roles-header">
+      <div>
+        <p class="s-label dark-label">Role families</p>
+        <h2 class="s-h2" id="roles-h2">Every function that drives a<br><em>fintech business forward</em></h2>
+      </div>
+      <p class="s-lead">We recruit across the full commercial and technical organisation — from first sales hire through to engineering leadership. Depth in the market means sharper shortlists, better conversations and faster fills.</p>
+    </div>
+
+    <div class="stats-row" role="list" aria-label="Key facts about OakFIN">
+      <div class="stat-cell" role="listitem">
+        <div class="stat-num">6<em>+</em></div>
+        <div class="stat-label">Specialist sectors,<br>not bolt-on verticals</div>
+      </div>
+      <div class="stat-cell" role="listitem">
+        <div class="stat-num">9<em>+</em></div>
+        <div class="stat-label">Role families across<br>commercial and technical</div>
+      </div>
+      <div class="stat-cell" role="listitem">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Global markets with<br>active search capability</div>
+      </div>
+      <div class="stat-cell" role="listitem">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Founder-led with<br>direct accountability</div>
+      </div>
+    </div>
+
+    <div class="roles-grid" style="margin-top:2.5rem" role="list" aria-label="Role families we recruit">
+      <div class="role-cell" role="listitem">
+        <span class="role-n">01</span>
+        <p class="role-title">Commercial &amp; Sales</p>
+        <p class="role-desc">Revenue-generating roles from first AE hire through to CRO across start-up, scale-up and enterprise fintech. We source candidates who understand complex B2B sales in regulated and specialist markets.</p>
+        <div class="role-tags">
+          <span class="tag">Account Executive</span>
+          <span class="tag">VP Sales</span>
+          <span class="tag">SDR / BDR</span>
+          <span class="tag">CRO</span>
+        </div>
+      </div>
+      <div class="role-cell" role="listitem">
+        <span class="role-n">02</span>
+        <p class="role-title">Customer Success</p>
+        <p class="role-desc">CSM, account management and CS leadership for high-retention fintech and B2B SaaS products. Candidates who can handle complex enterprise clients in financial services environments.</p>
+        <div class="role-tags">
+          <span class="tag">CSM</span>
+          <span class="tag">Head of CS</span>
+          <span class="tag">VP Customer Success</span>
+          <span class="tag">Onboarding</span>
+        </div>
+      </div>
+      <div class="role-cell" role="listitem">
+        <span class="role-n">03</span>
+        <p class="role-title">Presales &amp; Solutions</p>
+        <p class="role-desc">Solutions consultants and presales engineers for complex B2B deals in specialist financial markets. Domain knowledge in capital markets, private markets, payments or fund operations essential.</p>
+        <div class="role-tags">
+          <span class="tag">Solutions Consultant</span>
+          <span class="tag">Presales Engineer</span>
+          <span class="tag">Head of Solutions</span>
+        </div>
+      </div>
+      <div class="role-cell" role="listitem">
+        <span class="role-n">04</span>
+        <p class="role-title">Implementation</p>
+        <p class="role-desc">Implementation professionals and delivery leads for fintech platforms with complex client onboarding. Candidates who bridge product, client success and project delivery in financial technology environments.</p>
+        <div class="role-tags">
+          <span class="tag">Implementation Consultant</span>
+          <span class="tag">Project Delivery</span>
+          <span class="tag">Head of Delivery</span>
+        </div>
+      </div>
+      <div class="role-cell" role="listitem">
+        <span class="role-n">05</span>
+        <p class="role-title">Product</p>
+        <p class="role-desc">Product managers and product specialists across fintech platforms, financial data businesses and B2B SaaS. We differentiate between product management and product specialist roles — two very different profiles.</p>
+        <div class="role-tags">
+          <span class="tag">Product Manager</span>
+          <span class="tag">Product Specialist</span>
+          <span class="tag">CPO</span>
+        </div>
+      </div>
+      <div class="role-cell" role="listitem">
+        <span class="role-n">06</span>
+        <p class="role-title">Engineering &amp; Leadership</p>
+        <p class="role-desc">Software engineering and C-suite placements for specialist financial technology environments. From backend engineers building trading infrastructure to CTOs leading platform architecture at scale.</p>
+        <div class="role-tags">
+          <span class="tag">Backend Engineering</span>
+          <span class="tag">Platform / DevOps</span>
+          <span class="tag">CTO</span>
+          <span class="tag">VP Engineering</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTORS (DARK / 02) ═══ -->
+<section class="section-wrap dark" id="sectors" aria-labelledby="sectors-h2">
+  <span class="bg-num" aria-hidden="true">02</span>
+  <div class="section-inner">
+    <div class="split">
+      <div>
+        <p class="s-label">Sector depth</p>
+        <h2 class="s-h2" id="sectors-h2">Where we <em>operate</em></h2>
+      </div>
+      <p class="s-lead">We recruit exclusively in financial technology and specialist software. That focus means we understand your product, your buyer, your competitive landscape — and the candidates who thrive in your environment. A recruiter who doesn't understand fintech is a liability in these markets.</p>
+    </div>
+
+    <div class="sector-rows" role="list" aria-label="Sectors we recruit in">
+      <div class="sector-row" role="listitem">
+        <span class="sector-n">01</span>
+        <div class="sector-name">Fintech</div>
+        <div class="sector-detail">Payments, lending, wealth management, embedded finance, neobanks and B2C financial platforms. Early-stage to IPO-stage businesses with specialist hiring needs across commercial and technical functions.</div>
+        <div class="sector-roles">
+          <span class="sector-role-tag">Sales</span>
+          <span class="sector-role-tag">CSM</span>
+          <span class="sector-role-tag">Product</span>
+          <span class="sector-role-tag">Engineering</span>
+        </div>
+      </div>
+      <div class="sector-row" role="listitem">
+        <span class="sector-n">02</span>
+        <div class="sector-name">B2B SaaS</div>
+        <div class="sector-detail">Enterprise and mid-market software with complex sales cycles, specialist buyer communities and domain-dependent candidate pools. Generalist recruiters consistently miss the intersection of commercial skill and technical fluency that these roles require.</div>
+        <div class="sector-roles">
+          <span class="sector-role-tag">AE</span>
+          <span class="sector-role-tag">Presales</span>
+          <span class="sector-role-tag">CSM</span>
+          <span class="sector-role-tag">Implementation</span>
+        </div>
+      </div>
+      <div class="sector-row" role="listitem">
+        <span class="sector-n">03</span>
+        <div class="sector-name">Capital Markets Technology</div>
+        <div class="sector-detail">Trading, risk, compliance and post-trade infrastructure software for tier-1 banks, asset managers, hedge funds and prime brokers. Front office and sell-side domain depth. Candidates must understand both the technology and the market environment it serves.</div>
+        <div class="sector-roles">
+          <span class="sector-role-tag">Sales</span>
+          <span class="sector-role-tag">Solutions</span>
+          <span class="sector-role-tag">Product</span>
+        </div>
+      </div>
+      <div class="sector-row" role="listitem">
+        <span class="sector-n">04</span>
+        <div class="sector-name">Private Markets Software</div>
+        <div class="sector-detail">Fund administration, portfolio management, LP reporting and deal management platforms for private equity, venture capital, real assets and alternative investment managers. One of the most active specialist hiring markets globally in 2026.</div>
+        <div class="sector-roles">
+          <span class="sector-role-tag">Sales</span>
+          <span class="sector-role-tag">CSM</span>
+          <span class="sector-role-tag">Implementation</span>
+        </div>
+      </div>
+      <div class="sector-row" role="listitem">
+        <span class="sector-n">05</span>
+        <div class="sector-name">Payments &amp; Infrastructure</div>
+        <div class="sector-detail">Payment processing, acquiring, issuing, financial messaging and payment infrastructure businesses. Scheme knowledge, regulatory experience and a genuine understanding of how money moves — not just a payments-adjacent background.</div>
+        <div class="sector-roles">
+          <span class="sector-role-tag">Commercial</span>
+          <span class="sector-role-tag">Product</span>
+          <span class="sector-role-tag">Engineering</span>
+        </div>
+      </div>
+      <div class="sector-row" role="listitem">
+        <span class="sector-n">06</span>
+        <div class="sector-name">Financial Data &amp; Analytics</div>
+        <div class="sector-detail">Data vendors, research platforms and analytics businesses serving financial services clients — from market data to alternative data and ESG intelligence platforms. Roles that need both financial markets fluency and software adoption capability.</div>
+        <div class="sector-roles">
+          <span class="sector-role-tag">Sales</span>
+          <span class="sector-role-tag">Product Specialist</span>
+          <span class="sector-role-tag">Data</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROCESS (LIGHT / 03) ═══ -->
+<section class="section-wrap light" id="process" aria-labelledby="process-h2">
+  <span class="bg-num" aria-hidden="true">03</span>
+  <div class="section-inner">
+    <div class="split">
+      <div>
+        <p class="s-label dark-label">How we work</p>
+        <h2 class="s-h2" id="process-h2">Search built on<br><em>qualification</em>,<br>not volume</h2>
+      </div>
+      <p class="s-lead">We decline briefs that are not a good fit. That discipline — applied from the first conversation — is what makes each search we do run more predictably and produce better outcomes for clients, candidates and OakFIN.</p>
+    </div>
+
+    <div class="process-layout">
+      <div class="process-steps" role="list" aria-label="Our recruitment process">
+        <div class="process-step" role="listitem">
+          <span class="ps-num">01</span>
+          <div>
+            <p class="ps-title">Qualify the brief properly</p>
+            <p class="ps-desc">We assess niche fit, salary alignment, decision-maker access, urgency and commercial return before accepting any search. Poor-fit briefs get declined or renegotiated — not worked at low intensity while the best candidates get away.</p>
+          </div>
+        </div>
+        <div class="process-step" role="listitem">
+          <span class="ps-num">02</span>
+          <div>
+            <p class="ps-title">Build a targeted market map</p>
+            <p class="ps-desc">We identify the specific companies, backgrounds and candidate profiles that match your requirement. Every search starts with a defined strategy and a shared market map — not a keyword search of a generic database.</p>
+          </div>
+        </div>
+        <div class="process-step" role="listitem">
+          <span class="ps-num">03</span>
+          <div>
+            <p class="ps-title">Engage with genuine market expertise</p>
+            <p class="ps-desc">Candidates engage because the conversation is credible — informed by real understanding of the sector, the product and the career opportunity. AI accelerates the research. The commercial judgement stays human.</p>
+          </div>
+        </div>
+        <div class="process-step" role="listitem">
+          <span class="ps-num">04</span>
+          <div>
+            <p class="ps-title">Deliver a precise shortlist</p>
+            <p class="ps-desc">Our shortlists include clear rationale, candidate motivations, compensation data and interview readiness assessment — not a stack of CVs with a covering email. Every introduction is a deliberate match.</p>
+          </div>
+        </div>
+        <div class="process-step" role="listitem">
+          <span class="ps-num">05</span>
+          <div>
+            <p class="ps-title">Manage through to placement</p>
+            <p class="ps-desc">We stay close through interviews, offers and start dates. Most offer-stage fallouts are preventable. We identify the risks early, manage counteroffers proactively and stay involved until the candidate is in the role.</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="qual-panel" role="complementary" aria-label="Brief qualification criteria">
+          <div class="qual-panel-header">
+            <span class="qual-panel-title">Brief qualification scorecard</span>
+            <span class="qual-badge">OakFIN standard</span>
+          </div>
+          <div class="qual-rows">
+            <div class="qual-row">
+              <span class="qual-criterion">Niche fit</span>
+              <div class="qual-signal">
+                <span class="signal-dot green"></span>
+                <span>Directly in fintech / SaaS</span>
+              </div>
+            </div>
+            <div class="qual-row">
+              <span class="qual-criterion">Salary alignment</span>
+              <div class="qual-signal">
+                <span class="signal-dot green"></span>
+                <span>Realistic and approved</span>
+              </div>
+            </div>
+            <div class="qual-row">
+              <span class="qual-criterion">Decision-maker access</span>
+              <div class="qual-signal">
+                <span class="signal-dot green"></span>
+                <span>Direct hiring manager confirmed</span>
+              </div>
+            </div>
+            <div class="qual-row">
+              <span class="qual-criterion">Process quality</span>
+              <div class="qual-signal">
+                <span class="signal-dot amber"></span>
+                <span>Defined stages and feedback</span>
+              </div>
+            </div>
+            <div class="qual-row">
+              <span class="qual-criterion">Search urgency</span>
+              <div class="qual-signal">
+                <span class="signal-dot amber"></span>
+                <span>Live role with clear timeline</span>
+              </div>
+            </div>
+            <div class="qual-row">
+              <span class="qual-criterion">Commercial return</span>
+              <div class="qual-signal">
+                <span class="signal-dot green"></span>
+                <span>Fee potential justifies intensity</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:1.5rem; padding:1.5rem; border:1px solid rgba(8,11,12,0.08); background:rgba(8,11,12,0.02);">
+          <p style="font-size:0.875rem; color:#6a7882; line-height:1.7; font-weight:300;">We accept and prioritise briefs that score well across all six criteria. Briefs that fall short get an honest conversation — not a half-hearted search that wastes everyone's time.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY OAKFIN (DARK / 04) ═══ -->
+<section class="section-wrap dark" id="why" aria-labelledby="why-h2">
+  <span class="bg-num" aria-hidden="true">04</span>
+  <div class="section-inner">
+    <div class="split">
+      <div>
+        <p class="s-label">Why OakFIN</p>
+        <h2 class="s-h2" id="why-h2">Specialist depth<br>on <em>both sides</em><br>of the market</h2>
+      </div>
+      <p class="s-lead">The same sector knowledge that helps us engage the right candidates is what makes our client conversations useful — not just transactional. We operate as a recruitment partner, not a CV service. That distinction shows in the quality of every interaction.</p>
+    </div>
+
+    <div class="vp-grid" role="list" aria-label="Value propositions">
+      <div class="vp-card" role="listitem">
+        <p class="vp-for">For hiring businesses</p>
+        <h3 class="vp-title">Sharper shortlists,<br>faster decisions</h3>
+        <ul class="vp-list">
+          <li>Candidates pre-qualified on domain knowledge, not just CV keywords or job title matching</li>
+          <li>Honest assessment of salary expectations, process quality and candidate pool before a search starts</li>
+          <li>A market map before we source — so you understand the candidate universe from the outset</li>
+          <li>Global reach across UK, Europe and North America where the role demands it</li>
+          <li>Founder-led accountability — you deal directly with the person doing the work, not an account manager</li>
+          <li>Engagement models that fit: qualified contingent, exclusive search or retained mandate</li>
+        </ul>
+      </div>
+      <div class="vp-card" role="listitem">
+        <p class="vp-for">For candidates</p>
+        <h3 class="vp-title">Selective, informed<br>representation</h3>
+        <ul class="vp-list">
+          <li>Access to roles that match your domain background, seniority and career direction — not just your job title</li>
+          <li>Clear, honest feedback on market positioning, salary expectations and interview process at every stage</li>
+          <li>Long-term relationship with a recruiter who understands fintech and SaaS career paths in depth</li>
+          <li>No generic CV forwarding — every introduction is a deliberate match with a clear rationale</li>
+          <li>Guidance on equity, market compensation and how to evaluate a start-up opportunity properly</li>
+          <li>Confidential representation — your search is managed with discretion throughout</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ENGAGEMENT MODES (LIGHT / 05) ═══ -->
+<section class="section-wrap light" id="engage" aria-labelledby="engage-h2">
+  <span class="bg-num" aria-hidden="true">05</span>
+  <div class="section-inner">
+    <div class="split">
+      <div>
+        <p class="s-label dark-label">How to engage</p>
+        <h2 class="s-h2" id="engage-h2">Choose the right<br><em>search model</em></h2>
+      </div>
+      <p class="s-lead">We offer three engagement structures. The right choice depends on role seniority, search complexity and how much process control you need. We'll advise on what fits best before any commitment is made.</p>
+    </div>
+
+    <div class="engage-rows" role="list" aria-label="Engagement models">
+      <div class="engage-row" role="listitem">
+        <div>
+          <p class="er-label">Best for most searches</p>
+          <h3 class="er-title">Qualified contingent search</h3>
+        </div>
+        <div>
+          <p class="er-desc">For well-defined roles with strong niche fit, realistic salary and confirmed hiring manager access. Properly qualified from the outset — no speculative sending, no unqualified introductions.</p>
+        </div>
+        <div class="er-action">
+          <a href="#brief" class="btn btn-outline-dark" style="font-size:0.75rem;padding:0.625rem 1.25rem">
+            Submit brief
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="engage-row" role="listitem">
+        <div>
+          <p class="er-label">Higher control, better outcomes</p>
+          <h3 class="er-title">Exclusive contingent search</h3>
+        </div>
+        <div>
+          <p class="er-desc">For roles where OakFIN can credibly own the market. Brings greater focus and process control than a multi-agency brief — includes a shared market map and dedicated sourcing approach before we start.</p>
+        </div>
+        <div class="er-action">
+          <a href="#brief" class="btn btn-outline-dark" style="font-size:0.75rem;padding:0.625rem 1.25rem">
+            Discuss exclusivity
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="engage-row" role="listitem">
+        <div>
+          <p class="er-label">Senior, niche &amp; business-critical</p>
+          <h3 class="er-title">Retained specialist search</h3>
+        </div>
+        <div>
+          <p class="er-desc">For leadership, confidential or highly niche mandates. Includes a dedicated market map, structured reporting, weekly search updates and OakFIN's full focus on one role at a time. Appropriate for VP, C-suite and business-critical searches.</p>
+        </div>
+        <div class="er-action">
+          <a href="#brief" class="btn btn-outline-dark" style="font-size:0.75rem;padding:0.625rem 1.25rem">
+            Start retained search
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LIVE ROLES (DARK / 06) ═══ -->
+<section class="section-wrap dark" id="live-roles" aria-labelledby="live-roles-h2">
+  <span class="bg-num" aria-hidden="true">06</span>
+  <div class="section-inner">
+    <div class="split">
+      <div>
+        <p class="s-label">Active mandates</p>
+        <h2 class="s-h2" id="live-roles-h2">Live searches.<br><em>Open now.</em></h2>
+      </div>
+      <p class="s-lead">A selection of the roles OakFIN is actively working on. We also carry confidential mandates and candidate-led introductions that never appear here. Register to hear about the full pipeline.</p>
+    </div>
+
+    <div class="live-role-rows" role="list" aria-label="Current live roles">
+      <div class="live-role-row" role="listitem">
+        <span class="live-role-n">01</span>
+        <div class="live-role-head">
+          <div class="live-role-live">Live</div>
+          <div class="live-role-title">Sales Executive —<br>Global Exchange Platform</div>
+        </div>
+        <div class="live-role-detail">Senior commercial role with a global exchange business. The right candidate will have a track record of enterprise software or financial technology sales, strong existing relationships in financial markets and the ability to run complex, multi-stakeholder sales cycles independently.</div>
+        <div class="live-role-right">
+          <div class="live-salary">£100k + OTE</div>
+          <div class="live-tags">
+            <span class="live-tag">London</span>
+            <span class="live-tag">Fintech</span>
+            <span class="live-tag">Permanent</span>
+          </div>
+          <button class="live-apply" onclick="document.getElementById('brief').scrollIntoView({behavior:'smooth'});setTimeout(()=>{document.querySelector('[data-tab=candidate]').click()},600)">
+            Express interest →
+          </button>
+        </div>
+      </div>
+
+      <div class="live-role-row" role="listitem">
+        <span class="live-role-n">02</span>
+        <div class="live-role-head">
+          <div class="live-role-live">Live</div>
+          <div class="live-role-title">Customer Success Manager —<br>Private Markets SaaS</div>
+        </div>
+        <div class="live-role-detail">Senior CSM position with a high-growth private markets SaaS platform at Series B+. Requires genuine depth in private equity, private credit or fund of funds operations — not just software CSM experience. Strong equity component. Based in New York with a hybrid model.</div>
+        <div class="live-role-right">
+          <div class="live-salary">$180k + equity</div>
+          <div class="live-tags">
+            <span class="live-tag">New York</span>
+            <span class="live-tag">Private Markets</span>
+            <span class="live-tag">Permanent</span>
+          </div>
+          <button class="live-apply" onclick="document.getElementById('brief').scrollIntoView({behavior:'smooth'});setTimeout(()=>{document.querySelector('[data-tab=candidate]').click()},600)">
+            Express interest →
+          </button>
+        </div>
+      </div>
+
+      <div class="live-role-row" role="listitem">
+        <span class="live-role-n">03</span>
+        <div class="live-role-head">
+          <div class="live-role-live">Live</div>
+          <div class="live-role-title">Presales Consultant —<br>Private Markets SaaS</div>
+        </div>
+        <div class="live-role-detail">Solutions consultant role supporting enterprise sales cycles at a leading private markets software business. Ideal background is solutions engineering or presales within alternative investments, fund administration or financial technology. US-based, remote or hybrid. Excellent commission structure in a fast-growing market-leading platform.</div>
+        <div class="live-role-right">
+          <div class="live-salary">$170k + comms</div>
+          <div class="live-tags">
+            <span class="live-tag">USA Remote</span>
+            <span class="live-tag">Private Markets</span>
+            <span class="live-tag">Permanent</span>
+          </div>
+          <button class="live-apply" onclick="document.getElementById('brief').scrollIntoView({behavior:'smooth'});setTimeout(()=>{document.querySelector('[data-tab=candidate]').click()},600)">
+            Express interest →
+          </button>
+        </div>
+      </div>
+
+      <div class="live-role-row" role="listitem">
+        <span class="live-role-n">04</span>
+        <div class="live-role-head">
+          <div class="live-role-live">Live</div>
+          <div class="live-role-title">Product Specialist —<br>Financial Research Platform</div>
+        </div>
+        <div class="live-role-detail">Product specialist bridging client relationships and internal product teams at a specialist financial research and data platform. The right candidate understands both financial markets and software adoption dynamics — this is not a pure technology role. London-based with a hybrid working arrangement.</div>
+        <div class="live-role-right">
+          <div class="live-salary">£50k + bonus</div>
+          <div class="live-tags">
+            <span class="live-tag">London</span>
+            <span class="live-tag">Financial Data</span>
+            <span class="live-tag">Permanent</span>
+          </div>
+          <button class="live-apply" onclick="document.getElementById('brief').scrollIntoView({behavior:'smooth'});setTimeout(()=>{document.querySelector('[data-tab=candidate]').click()},600)">
+            Express interest →
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="pipeline-note">
+      <p class="pipeline-note-text">OakFIN works on <strong>many more searches that are confidential</strong> or not listed here — including leadership mandates, retained searches and candidate-led introductions. Register to receive the full pipeline directly.</p>
+      <a href="#brief" class="btn btn-outline-gold" style="flex-shrink:0">
+        Register as a candidate
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT (DARK / 07) ═══ -->
+<section class="section-wrap dark" id="about" aria-labelledby="about-h2">
+  <span class="bg-num" aria-hidden="true">07</span>
+  <div class="section-inner">
+    <p class="s-label">About OakFIN</p>
+    <h2 class="s-h2" id="about-h2">Built for <em>specialists</em></h2>
+    <div class="about-layout" style="margin-top:3.5rem">
+      <div class="about-sticky">
+        <div class="founder-block">
+          <div class="founder-initial" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <h3 class="founder-name">Nicky Harris</h3>
+          <p class="founder-title">Founder &amp; Managing Director</p>
+          <p class="founder-bio">Specialist recruiter with a track record of placing commercial, product and technology talent across fintech and B2B SaaS globally — from London start-ups to enterprise platforms in New York and beyond. OakFIN was built on the conviction that specialist markets deserve specialist search, not a generalist practice with a vertical bolt-on. Two years in, that conviction drives every search we take on.</p>
+          <div class="founder-links">
+            <a href="mailto:nicky@oakfinltd.com" class="founder-link">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              nicky@oakfinltd.com
+            </a>
+            <a href="tel:07903637357" class="founder-link">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.13 6.13l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              07903 637 357
+            </a>
+            <a href="https://www.linkedin.com/company/oakfin-ltd/" target="_blank" rel="noopener noreferrer" class="founder-link">
+              <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn — OakFIN Ltd
+            </a>
+          </div>
+        </div>
+
+        <div class="team-note" style="margin-top:1.5rem">
+          <p class="team-note-label">Team</p>
+          <div class="team-member">
+            <div class="team-initial"><span>J</span></div>
+            <div>
+              <div class="team-name">James Faustino</div>
+              <div class="team-role">Sales Support Specialist</div>
+            </div>
+            <a href="mailto:james@oakfinltd.com" class="team-email">james@oakfinltd.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <div class="about-block">
+          <p class="ab-label">Why we exist</p>
+          <h3 class="ab-h">The generalist problem in fintech hiring</h3>
+          <p class="ab-p">Most recruiters treat fintech as a vertical bolt-on to a generalist practice. They know enough to write a job description, but not enough to evaluate whether a candidate truly understands the market, the buyer or the product they would be selling, implementing or building.</p>
+          <p class="ab-p">OakFIN was built to close that gap. We recruit exclusively in financial technology and specialist software — which means our domain knowledge is genuine, developed from real market conversations rather than borrowed from a job specification.</p>
+        </div>
+
+        <div class="about-block">
+          <p class="ab-label">Our approach</p>
+          <h3 class="ab-h">A manageable search load — by design</h3>
+          <p class="ab-p">We keep our active search load manageable. That means more time spent on each brief: proper qualification, thorough market mapping, and candidate conversations that go well beyond a CV summary. We would rather work on fewer searches properly than many searches superficially.</p>
+          <p class="ab-p">We use AI to accelerate the research and operational side of search. The commercial judgement — what makes a candidate right for a role, whether a brief is worth taking on, how to handle a counteroffer — stays human. That distinction matters.</p>
+        </div>
+
+        <div class="about-block">
+          <p class="ab-label">Global reach</p>
+          <h3 class="ab-h">London-anchored, globally capable</h3>
+          <p class="ab-p">OakFIN's primary market is the UK with London as the anchor. We have active search capability across Europe and North America, and have placed candidates and represented clients across four continents. We know what it means to run a search across time zones — and we don't use that as a selling point without the work ethic to back it up.</p>
+          <div class="geo-tags">
+            <span class="geo-tag">London</span>
+            <span class="geo-tag">UK</span>
+            <span class="geo-tag">Western Europe</span>
+            <span class="geo-tag">New York</span>
+            <span class="geo-tag">North America</span>
+            <span class="geo-tag">APAC (select)</span>
+          </div>
+        </div>
+
+        <div class="about-block">
+          <p class="ab-label">Our commitment</p>
+          <h3 class="ab-h">Honest about what we take on</h3>
+          <p class="ab-p">We decline briefs that aren't a good fit — roles outside our niche, with unrealistic salary expectations, or without the process quality that gives a search a reasonable chance of success. That discipline makes us considerably more useful to the clients we do take on, and significantly more reliable for the candidates we represent.</p>
+          <p class="ab-p">This is a marathon, not a sprint. OakFIN is building for the long term — which means every relationship, every search and every placement matters more than the next transaction.</p>
+
+          <div class="charity-block">
+            <div class="charity-icon" aria-hidden="true">🥊</div>
+            <div>
+              <p class="charity-label">Community &amp; Charity</p>
+              <p class="charity-text">Nicky is a proud ambassador for <strong>Behind Every Kick</strong>, a charity supporting mental health and opportunity through sport. OakFIN believes that doing well in business and doing good in the community are not separate things.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BRIEF FORM (PAPER) ═══ -->
+<section class="brief-section" id="brief" aria-labelledby="brief-h2">
+  <div class="brief-inner">
+    <div class="brief-left">
+      <p class="s-label">Start here</p>
+      <h2 class="s-h2" id="brief-h2">Send us<br>a brief —<br>or register</h2>
+      <p class="s-lead" style="margin-bottom:1.5rem">Whether you're a hiring business with a brief or a specialist looking for your next role, start with a message. We respond to every inquiry within one business day with an honest assessment of whether and how we can help.</p>
+      <p class="s-lead" style="max-width:380px">The more detail you provide on sector, seniority, salary and timing, the more useful our response will be.</p>
+      <div style="margin-top:2.5rem;padding:1.5rem;border-left:2px solid var(--gold-dim);padding-left:1.25rem">
+        <p style="font-size:0.8125rem;color:#6a7882;line-height:1.7;font-weight:300">Prefer to talk first? Call Nicky directly on <a href="tel:07903637357" style="color:var(--night);font-weight:500;text-decoration:none">07903 637 357</a> or email <a href="mailto:nicky@oakfinltd.com" style="color:var(--night);font-weight:500;text-decoration:none">nicky@oakfinltd.com</a></p>
+      </div>
+      <div style="margin-top:1.5rem;padding:1.5rem;border-left:2px solid rgba(8,11,12,0.12);padding-left:1.25rem">
+        <p style="font-size:0.8125rem;color:#6a7882;line-height:1.7;font-weight:300">Candidate enquiries? Reach James at <a href="mailto:james@oakfinltd.com" style="color:var(--night);font-weight:500;text-decoration:none">james@oakfinltd.com</a></p>
+      </div>
+    </div>
+
+    <div>
+      <div class="form-tabs" role="tablist" aria-label="Choose enquiry type">
+        <button class="form-tab active" role="tab" aria-selected="true" aria-controls="panel-client" id="tab-client" data-tab="client" onclick="switchTab('client')">
+          Send a role brief
+        </button>
+        <button class="form-tab" role="tab" aria-selected="false" aria-controls="panel-candidate" id="tab-candidate" data-tab="candidate" onclick="switchTab('candidate')">
+          Register as candidate
+        </button>
+      </div>
+
+      <!-- CLIENT PANEL -->
+      <div class="form-panel active" id="panel-client" role="tabpanel" aria-labelledby="tab-client">
+        <form action="mailto:nicky@oakfinltd.com" method="POST" enctype="text/plain" aria-label="Role brief submission">
+          <input type="hidden" name="type" value="Client brief">
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-lbl" for="c-name">Your name</label>
+              <input class="form-input" type="text" id="c-name" name="name" placeholder="Your full name" required autocomplete="name">
+            </div>
+            <div class="form-field">
+              <label class="form-lbl" for="c-company">Company</label>
+              <input class="form-input" type="text" id="c-company" name="company" placeholder="Company name" required autocomplete="organization">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-lbl" for="c-email">Work email</label>
+              <input class="form-input" type="email" id="c-email" name="email" placeholder="you@company.com" required autocomplete="email">
+            </div>
+            <div class="form-field">
+              <label class="form-lbl" for="c-phone">Phone</label>
+              <input class="form-input" type="tel" id="c-phone" name="phone" placeholder="+44 7000 000 000" autocomplete="tel">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-lbl" for="c-sector">Sector</label>
+              <select class="form-select" id="c-sector" name="sector" required>
+                <option value="" disabled selected>Select sector</option>
+                <option>Fintech</option>
+                <option>B2B SaaS</option>
+                <option>Capital Markets Technology</option>
+                <option>Private Markets Software</option>
+                <option>Payments &amp; Infrastructure</option>
+                <option>Financial Data &amp; Analytics</option>
+                <option>Other financial technology</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label class="form-lbl" for="c-role">Role family</label>
+              <select class="form-select" id="c-role" name="role_family" required>
+                <option value="" disabled selected>Select role type</option>
+                <option>Sales / Commercial</option>
+                <option>Account Executive</option>
+                <option>Customer Success</option>
+                <option>Presales / Solutions</option>
+                <option>Implementation</option>
+                <option>Product Management</option>
+                <option>Product Specialist</option>
+                <option>Engineering</option>
+                <option>Leadership / C-Suite</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field full">
+            <label class="form-lbl" for="c-brief">Brief details</label>
+            <textarea class="form-textarea" id="c-brief" name="brief" placeholder="Job title, seniority, location, salary range, urgency and any key requirements. The more detail you provide, the more useful our response will be."></textarea>
+          </div>
+          <button class="form-submit" type="submit">
+            Send brief to OakFIN
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <p class="form-note">Your details are used only to respond to this enquiry. We do not pass your information to third parties.</p>
+        </form>
+      </div>
+
+      <!-- CANDIDATE PANEL -->
+      <div class="form-panel" id="panel-candidate" role="tabpanel" aria-labelledby="tab-candidate">
+        <form action="mailto:nicky@oakfinltd.com" method="POST" enctype="text/plain" aria-label="Candidate registration">
+          <input type="hidden" name="type" value="Candidate registration">
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-lbl" for="cd-name">Your name</label>
+              <input class="form-input" type="text" id="cd-name" name="name" placeholder="Your full name" required autocomplete="name">
+            </div>
+            <div class="form-field">
+              <label class="form-lbl" for="cd-email">Email</label>
+              <input class="form-input" type="email" id="cd-email" name="email" placeholder="you@email.com" required autocomplete="email">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-lbl" for="cd-role">Current role</label>
+              <input class="form-input" type="text" id="cd-role" name="current_role" placeholder="e.g. Senior CSM at Fintech Co" autocomplete="off">
+            </div>
+            <div class="form-field">
+              <label class="form-lbl" for="cd-linkedin">LinkedIn URL</label>
+              <input class="form-input" type="url" id="cd-linkedin" name="linkedin" placeholder="linkedin.com/in/yourname" autocomplete="off">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-lbl" for="cd-sector">Sector specialism</label>
+              <select class="form-select" id="cd-sector" name="sector">
+                <option value="" disabled selected>Select sector</option>
+                <option>Fintech</option>
+                <option>B2B SaaS</option>
+                <option>Capital Markets Technology</option>
+                <option>Private Markets Software</option>
+                <option>Payments &amp; Infrastructure</option>
+                <option>Financial Data &amp; Analytics</option>
+                <option>Multiple / open</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label class="form-lbl" for="cd-function">Role function</label>
+              <select class="form-select" id="cd-function" name="function">
+                <option value="" disabled selected>Select function</option>
+                <option>Sales / AE</option>
+                <option>Customer Success</option>
+                <option>Presales / Solutions</option>
+                <option>Implementation</option>
+                <option>Product Management</option>
+                <option>Product Specialist</option>
+                <option>Engineering</option>
+                <option>Leadership / C-Suite</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field full">
+            <label class="form-lbl" for="cd-note">What are you looking for?</label>
+            <textarea class="form-textarea" id="cd-note" name="note" placeholder="Share your background, what you're looking for (location, seniority, type of company), salary expectations and timing. The more detail you share, the better we can match you to the right opportunities."></textarea>
+          </div>
+          <button class="form-submit" type="submit">
+            Register with OakFIN
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <p class="form-note">We review every registration personally. We will be in touch within one business day if we can help. Your details are handled with full discretion and not shared with third parties.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-word">Oak<em>FIN</em></div>
+        <p class="footer-tagline">Specialist fintech and B2B SaaS recruitment across commercial, product, implementation and engineering. London-anchored. Globally capable.</p>
+        <div class="footer-contact-row">
+          <div class="footer-contact-item">Nicky Harris · <a href="mailto:nicky@oakfinltd.com">nicky@oakfinltd.com</a> · <a href="tel:07903637357">07903 637 357</a></div>
+          <div class="footer-contact-item">James Faustino · <a href="mailto:james@oakfinltd.com">james@oakfinltd.com</a></div>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-label">What we do</p>
+        <ul class="footer-links">
+          <li><a href="#roles">Role families</a></li>
+          <li><a href="#sectors">Sectors</a></li>
+          <li><a href="#process">Our process</a></li>
+          <li><a href="#engage">Retained search</a></li>
+          <li><a href="#engage">Talent mapping</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-label">Company</p>
+        <ul class="footer-links">
+          <li><a href="#about">About OakFIN</a></li>
+          <li><a href="https://www.linkedin.com/company/oakfin-ltd/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="mailto:nicky@oakfinltd.com">Contact Nicky</a></li>
+          <li><a href="mailto:james@oakfinltd.com">Contact James</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-label">Work with us</p>
+        <ul class="footer-links">
+          <li><a href="#brief">Submit a brief</a></li>
+          <li><a href="#brief">Register as candidate</a></li>
+          <li><a href="#live-roles">Live opportunities</a></li>
+          <li><a href="mailto:nicky@oakfinltd.com">Partnership enquiries</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 OakFIN Ltd. Registered in England and Wales. London.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy policy</a>
+        <a href="#">Cookie preferences</a>
+        <a href="#">Terms of business</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ── NAV SCROLL ── */
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+/* ── MOBILE NAV ── */
+const toggle  = document.getElementById('navToggle');
+const mobileNav = document.getElementById('mobileNav');
+const closeBtn  = document.getElementById('mobileNavClose');
+
+function openMobileNav() {
+  mobileNav.classList.add('open');
+  mobileNav.setAttribute('aria-hidden', 'false');
+  toggle.setAttribute('aria-expanded', 'true');
+  document.body.style.overflow = 'hidden';
+}
+function closeMobileNav() {
+  mobileNav.classList.remove('open');
+  mobileNav.setAttribute('aria-hidden', 'true');
+  toggle.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+toggle.addEventListener('click', openMobileNav);
+closeBtn.addEventListener('click', closeMobileNav);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileNav(); });
+
+/* ── FORM TABS ── */
+function switchTab(tab) {
+  document.querySelectorAll('.form-tab').forEach(t => {
+    const active = t.dataset.tab === tab;
+    t.classList.toggle('active', active);
+    t.setAttribute('aria-selected', active);
+  });
+  document.querySelectorAll('.form-panel').forEach(p => {
+    p.classList.toggle('active', p.id === 'panel-' + tab);
+  });
+}
+/* Expose for inline onclick on live role buttons */
+window.switchTab = switchTab;
+
+/* ── SCROLL ANIMATIONS ── */
+if ('IntersectionObserver' in window) {
+  const targets = document.querySelectorAll(
+    '.process-step, .sector-row, .live-role-row, .engage-row, .vp-card, .about-block, .role-cell, .stat-cell'
+  );
+  targets.forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(16px)';
+    el.style.transition = 'opacity 0.6s cubic-bezier(0.22,1,0.36,1), transform 0.6s cubic-bezier(0.22,1,0.36,1)';
+  });
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const siblings = Array.from(entry.target.parentNode.children);
+        const delay = Math.min(siblings.indexOf(entry.target) * 60, 300);
+        setTimeout(() => {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }, delay);
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  targets.forEach(el => obs.observe(el));
+}
+</script>
+</body>
+</html>
